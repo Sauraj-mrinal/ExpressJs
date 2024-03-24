@@ -1,5 +1,5 @@
 const cp = require('child_process'); // import a module 
-const { log } = require('console');
+
 
 
 console.log("trying to open Calculator");
