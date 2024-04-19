@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #444;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .profile-image {
+            display: block;
+            margin: 20px auto;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .portfolio-item {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type=text] {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type=submit] {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        .social-icons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #333;
+            text-decoration: none;
+            font-size: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+        .highlight {
+            background-color: yellow;
+            transition: background-color 0.5s ease;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Mrinal Sauraj</h1>
+    </header>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container" id="about">
+        <h2>About Me</h2>
+        <img src="/mrinal_small_photo.png" alt="Profile Image" class="profile-image">
+        <p> <h3>Enthusiastic and detail-oriented MCA graduate  with a strong foundation in computer science and programming. 
+            Adept at developing and implementing software solutions, with a focus on problem-solving and efficiency.
+             Possesses hands-on experience in various programming languages, including Java and Python.
+            Proven ability to work collaboratively in team environments, coupled with excellent communication skills.
+             Eager to apply academic knowledge and practical skills to contribute effectively to innovative software development projects.
+             A quick learner with a passion for staying updated on emerging technologies. Ready to leverage a solid academic background and
+              passion for coding in an entry-level software development role.</h3></p>
+        <div class="social-icons">
+ 
+            <a href="https://www.linkedin.com/" target="_blank"><img src="" class="fa fa-linkedin-square" style="font-size:48px;color:rgba(13, 0, 255, 0.631)"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="" class="fa fa-instagram" style="font-size:48px;color:red"></a>
+            <a href="https://www.twiter.com/" target="_blank"><img src="" class="fa fa-twitter" style="font-size:48px;color:rgb(0, 174, 255)"></a>
+            <!-- Add more social media icons and links as needed -->
+        </div>
+    </div>
+    <div class="container" id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-item">
+            <h3>Stock Management</h3>
+            <p>Stock Management System is an innovative web-based application
+                designed to streamline the process of purchasing and managing product
+                online, That helps us to maintain and manage the stock and enhance our
+                Sell.</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Project 2</h3>
+            <p>Description of Project 2.</p>
+        </div>
+        <div class="portfolio-item">
+            <h3>Project 3</h3>
+            <p>Description of Project 3.</p>
+        </div>
+    </div>
+    <div class="container" id="contact">
+        <h2>Contact</h2>
+        <p>Email: example@example.com</p>
+    </div>
+    <footer>
+        &copy; 2024 mrinalsauraj
+    </footer>
+    <script>
+        function highlightSearch() {
+            var input, filter, container, items, text, i;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            container = document.getElementById('portfolio');
+            items = container.getElementsByClassName('portfolio-item');
+            for (i = 0; i < items.length; i++) {
+                text = items[i].innerText.toUpperCase();
+                if (text.indexOf(filter) > -1) {
+                    items[i].classList.remove('highlight');
+                } else {
+                    items[i].classList.add('highlight');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
